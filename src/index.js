@@ -138,8 +138,7 @@ $(document).ready(function () {
     }
   });
 
-  const chatBubbles = $(".chat-bubble");
-
+// const chatBubbles = $(".chat-bubble");
 //  chatBubbles.each(function () {
 //    const chatName = $(this).prev(".chat-name").text();
 //    const chatContent = $(this).text();
@@ -152,6 +151,26 @@ $(document).ready(function () {
       event.preventDefault();
       $('.send-btn').click();
     }
+  });
+  
+  var lineHeight = parseInt($('.chat-input').css('line-height'));
+  var defaultHeight = parseInt($('.chat-input').css('height'));
+
+  $('.chat-input').on('input', function() {
+    var lines = Math.floor(this.scrollHeight / lineHeight);
+    var maxLines = 4;
+
+    if (lines > maxLines) {
+      $(this).val($(this).val().split('\n').slice(0, maxLines).join('\n'));
+      lines = maxLines;
+    }
+
+    var newHeight = lineHeight * lines;
+    if ($(this).val().trim() === '') {
+      newHeight = defaultHeight;
+    }
+
+    $(this).css('height', newHeight + 'px');
   });
 
   // Event handler for closing the chat box
