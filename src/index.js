@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  let conversation = ''; // Variable to store the conversation history
+
   let human = 'Me';
   let assistant = 'Herta';
   let humanpict = 'res/profile/stelle.png';
@@ -16,7 +16,7 @@ $(document).ready(function () {
   }, 'text');
   // Function to send a message to the AI and handle the response
   function sendMessage(message) {
-    conversation += `${message}`;
+    let conversation = message;
   
     // Send the message to the AI using BAIChat
     chat.ask(conversation).then((response) => {
