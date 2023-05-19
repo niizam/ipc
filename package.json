@@ -1,0 +1,32 @@
+{
+  "name": "ipc",
+  "version": "1.0.0",
+  "description": "An application that replicates the in-game chat messaging experience of HSR.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "Nizam <nizam@europe.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.1.7",
+    "electron": "^24.3.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.ipc.hsr",
+    "productName": "Interastral Peace Chat",
+    "asar": false,
+    "icon": "src/res/icon.png",
+    "linux": {
+      "target": "AppImage"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  }
+}

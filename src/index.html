@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HSR Messaging</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function showToSPopup() {
+            document.getElementById("tos-popup").style.display = "block";
+        }
+        
+        function acceptToS() {
+            document.getElementById("tos-popup").style.display = "none";
+            // Add your code here to handle the acceptance of Terms of Service
+        }
+        
+        function cancelToS() {
+            document.getElementById("tos-popup").style.display = "none";
+            // Add your code here to handle the cancellation of Terms of Service
+        }
+    </script>
+</head>
+<body>
+    <div class="chat-box">
+        <div class="chat-header">
+            <span class="name">Herta</span>
+            <span class="status">This account is disabled | Business Contact: Asta</span>
+            <button class="close-btn"></button>
+        </div>
+        <hr>
+        <div class="chat-dialogue">
+            <div class="message other">
+                <img src="res/profile/herta.png" alt="other">
+                <div class="chat-content">
+                  <span class="chat-name-other">Herta</span>
+                  <div class="chat-bubble">
+                    [Automatic reply] Hi, I'm currently unavailable, and I won't be contacting you later
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="chat-footer">
+            <textarea class='chat-input' placeholder="Write a message ..."></textarea>
+            <button class="send-btn" onclick="replaceName()">≫</button>
+        </div>
+    </div>
+    
+    <!-- Terms of Service Popup -->
+    <div id="tos-popup" class="popup">
+        <div class="popup-content">
+            <h2>Edit Name</h2>
+            <textarea class="your-name" placeholder="Please enter your name"></textarea>
+            <div class="button-wrapper">
+                <button class="Cancel">ⓧ Cancel</button>
+                <button class="OK">☑ Confirm</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="baichat.js"></script>
+    <script src="index.js"></script>
+    
+    <script>
+        // Show the Terms of Service popup when the page loads
+        window.addEventListener('load', showToSPopup);
+    </script>
+</body>
+</html>
