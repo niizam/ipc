@@ -17,13 +17,13 @@
   "build": {
     "appId": "com.ipc.hsr",
     "productName": "Interastral Peace Chat",
-    "asar": false,
     "icon": "src/res/icon.png",
     "linux": {
       "target": "AppImage"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "asar": false
     },
     "mac": {
       "target": "dmg"
