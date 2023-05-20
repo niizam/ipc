@@ -2,6 +2,14 @@
  An application that replicates the in-game chat messaging experience of HSR.
 <img src="https://github.com/niizam/ipc/assets/45286708/dbd2a02c-f2fd-4cad-90a6-3b888ffa0617" alt="image" width="400" height="500">
 
+## Manual
+
+### Keyboard Shortcuts
+
+- **Ctrl+D**: Clear the chat
+- **Ctrl+Shift++**: Zoom in
+- **Ctrl+-**: Zoom out
+
 ## How to Build
 ### Prerequisites
 Make sure you have the following software installed on your system:
